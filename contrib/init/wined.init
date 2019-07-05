@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  wined The Wine Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: wined
+# processname: wined
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/wined, see below
+if [ -f /etc/sysconfig/wined ]; then
+        . /etc/sysconfig/wined
+fi
+
+RETVAL=0
+
+prog=wined
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/wined
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/wined}
+
+# wined defaults to /usr/bin/wined, override with BITCOIND_BIN
+wined=${BITCOIND_BIN-/usr/bin/wined}
+
+# wined opts default to -disablewallet, override with BITCOIND_OPTS
+wined_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $wined $wined_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

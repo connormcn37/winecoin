@@ -1,0 +1,6 @@
+usr/local/bin/wine-qt usr/bin
+share/pixmaps/wine32.xpm usr/share/pixmaps
+share/pixmaps/wine16.xpm usr/share/pixmaps
+share/pixmaps/wine128.png usr/share/pixmaps
+debian/wine-qt.desktop usr/share/applications
+debian/wine-qt.protocol usr/share/kde4/services/

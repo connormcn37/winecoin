@@ -1,0 +1,22 @@
+[Unit]
+Description=Wine's distributed currency daemon
+After=network.target
+
+[Service]
+User=winecore
+Group=winecore
+
+Type=forking
+PIDFile=/var/lib/wined/wined.pid
+ExecStart=/usr/bin/wined -daemon -pid=/var/lib/wined/wined.pid \
+-conf=/etc/winecore/wine.conf -datadir=/var/lib/wined -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

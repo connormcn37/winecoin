@@ -1,0 +1,3 @@
+debian/manpages/wined.1
+debian/manpages/wine.conf.5
+debian/manpages/wine-cli.1

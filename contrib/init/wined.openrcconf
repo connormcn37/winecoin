@@ -1,0 +1,33 @@
+# /etc/conf.d/wined: config file for /etc/init.d/wined
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/winecore/wine.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/wined"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/wined.pid"
+
+# Where to write wined data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/wined"
+
+# User and group to own wined process
+#BITCOIND_USER="winecore"
+#BITCOIND_GROUP="winecore"
+
+# Path to wined executable
+#BITCOIND_BIN="/usr/bin/wined"
+
+# Nice value to run wined under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for bitcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOIND_SIGTERM_TIMEOUT=60

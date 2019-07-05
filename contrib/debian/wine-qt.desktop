@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Wine
+Comment=Wine P2P Cryptocurrency
+Comment[fr]=Wine, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Wine, eşten eşe kriptografik sanal para birimi
+Exec=wine-qt %u
+Terminal=false
+Type=Application
+Icon=wine128
+MimeType=x-scheme-handler/wine;
+Categories=Office;Finance;

@@ -1,0 +1,45 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Changes not staged for commit:
+#	modified:   contrib/debian/README.md
+#	modified:   contrib/debian/examples/wine.conf
+#	modified:   contrib/debian/manpages/wine-cli.1
+#	modified:   contrib/debian/wine-qt.desktop
+#	modified:   contrib/debian/wine-qt.install
+#	modified:   contrib/debian/wine-qt.lintian-overrides
+#	modified:   contrib/debian/wine-qt.protocol
+#	modified:   contrib/debian/wine-tx.install
+#	modified:   contrib/debian/wined.bash-completion
+#	modified:   contrib/debian/wined.examples
+#	modified:   contrib/debian/wined.install
+#	modified:   contrib/debian/wined.lintian-overrides
+#	modified:   contrib/debian/wined.manpages
+#	modified:   contrib/init/org.wine.wined.plist
+#	modified:   contrib/init/wined.service
+#	modified:   contrib/wine-qt.pro
+#	modified:   contrib/wined.bash-completion
+#	modified:   src/drafted/governance-categories.h
+#	modified:   src/drafted/governance-classes.h
+#	modified:   src/drafted/governance-keys.cpp
+#	modified:   src/drafted/governance-keys.h
+#	modified:   src/drafted/governance-types.cpp
+#	modified:   src/qt/editaddressdialog.cpp
+#	modified:   src/qt/forms/addressbookpage.ui
+#	modified:   src/qt/res/wine-qt-res.rc
+#	modified:   src/qt/wine.cpp
+#	modified:   src/qt/wine.qrc
+#	modified:   src/qt/wine_locale.qrc
+#	modified:   src/qt/winestrings.cpp
+#	modified:   src/script/wineconsensus.cpp
+#	modified:   src/script/wineconsensus.h
+#	modified:   src/wine-cli-res.rc
+#	modified:   src/wine-cli.cpp
+#	modified:   src/wine-tx-res.rc
+#	modified:   src/wine-tx.cpp
+#	modified:   src/wined-res.rc
+#	modified:   src/wined.cpp
+#	modified:   wine-docs/protocol-documentation.md
+#
